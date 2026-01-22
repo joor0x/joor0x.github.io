@@ -1,0 +1,46 @@
+baseURL = "https://joseporiolcarne.github.io/"
+languageCode = "en-us"
+title = "Josep Oriol Carné - Developer & Algorithmic Trader"
+theme = "PaperMod"
+# Turn on if you want to show drafts
+# buildDrafts = true  
+
+[params]
+  # Name of your site/brand
+  author = "Josep Oriol Carné"
+  description = "A blog on Evolution, Algorithmic Trading and Cybersecurity."
+  showReadingTime = true
+
+[[params.socialIcons]]
+  name = "github"
+  url = "https://github.com/joseporiolcarne"
+  title = "GitHub"
+  # Suggest a color palette with cool/futuristic tones or neutral tech shades
+  # Use PaperMod's color customization features
+  themeColor = "auto"   # "light", "dark", or "auto"
+  # Example: set accent color if the theme allows
+  accentColor = "#5c6bc0"  # Blue-purple shade
+
+[menu]
+
+  [[menu.main]]
+    identifier = "home"
+    name = "Home"
+    url = "/"
+    weight = 1
+
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about"
+    weight = 2
+
+  [[menu.main]]
+    identifier = "blog"
+    name = "Blog"
+    url = "/posts"
+    weight = 3
+
+[services]
+  [services.googleAnalytics]
+    ID = "G-DQ8LLMPBBF"

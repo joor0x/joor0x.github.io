@@ -1,0 +1,43 @@
+# Hugo build output
+public/
+resources/
+.hugo_build.lock
+
+# Generated files in root (GitHub Pages artifacts)
+/*.html
+/*.xml
+/posts/
+/tags/
+/categories/
+/page/
+/about/
+/assets/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor directories
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Python virtual environment
+venv/
+.venv/
+__pycache__/
+
+# AI assistant caches
+.aider*/
+.claude/
+
+# Environment files
+.env
+.env.local
+
+# Local contributor docs
+AGENTS.md
+.obsidian/
+.obsidian/
