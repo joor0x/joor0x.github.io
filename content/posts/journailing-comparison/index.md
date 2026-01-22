@@ -1,6 +1,6 @@
 ---
 title: "Debugging the Human OS: A Comparative Analysis of Journaling Protocols"
-author: "Josep Oriol Carné"
+author: "joor0x"
 date: 2025-03-25
 description: "Analyzing various journaling techniques as protocols for personal system optimization, productivity boosts, and cognitive debugging."
 tags: ["journaling", "productivity", "optimization", "mental-models", "self-improvement", "protocols", "obsidian"]

@@ -1,6 +1,6 @@
 +++
 title = "Look‑Ahead Traps in Backtesting (Backtrader, MQL, PineScript)"
-author = "Josep Oriol Carné"
+author = "joor0x"
 date = 2025-12-19
 description = "Simple, practical examples of look‑ahead bias across Backtrader, MQL, and PineScript—and how to avoid it."
 tags = ["backtesting", "look-ahead-bias", "backtrader", "pinescript", "mql", "trading"]

@@ -1,6 +1,6 @@
 ---
 title: "Secure Network Architecture for Home-Based Trading & Server Ops"
-author: "Josep Oriol Carné"
+author: "joor0x"
 date: 2025-04-25
 description: "A pragmatic guide to designing and securing a home network for high-uptime trading systems and personal servers, covering segmentation, router hardening, and server security principles."
 tags: ["network-security", "homelab", "trading", "servers", "cybersecurity", "networking", "router", "hardening", "ubuntu", "dell", "ibm", "raspberry-pi"]

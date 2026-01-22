@@ -1,6 +1,6 @@
 ---
 title: "How Survivorship Bias Is Costing You Money (And You Don't Even Know It)"
-author: "Josep Oriol Carné"
+author: "joor0x"
 date: 2025-11-03
 description: "Discover how survivorship bias—a cognitive trap born from WWII bomber analysis—distorts investment strategies, startup success rates, and trading decisions. Learn to see what's missing."
 tags: ["investing", "cognitive-bias", "trading", "decision-making", "finance", "psychology", "startups"]

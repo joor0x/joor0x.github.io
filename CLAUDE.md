@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Personal blog built with Hugo using the PaperMod theme. Topics: Evolution, Algorithmic Trading, and Cybersecurity. Deploys to https://joseporiolcarne.github.io/
+Personal blog built with Hugo using the PaperMod theme. Topics: Evolution, Algorithmic Trading, and Cybersecurity. Deploys to https://joor0x.github.io/
 
 ## Commands
 
@@ -77,11 +77,10 @@ When creating or editing blog posts, follow these SEO and readability guidelines
 - Busy backgrounds
 - Cartoon/playful styles
 
+## Commits
 
+Use conventional commit messages when adding or updating blog posts, e.g.:
 ```
-
-### Reusable Image Generation Prompt
-
+feat(blog): add post on look-ahead bias in backtesting
 ```
-Create a wide 16:9 technical–minimalist illustration about {TOPIC}, clean vector style, neutral palette, high contrast, thin geometric lines, spacious layout, no stock elements, no people, no clutter. Focus on horizontal composition with clear left-to-right information flow. Suitable for a modern developer blog.
-```
+Use user 'joor0x' for all commits.

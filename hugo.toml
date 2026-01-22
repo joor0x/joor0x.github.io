@@ -1,19 +1,19 @@
-baseURL = "https://joseporiolcarne.github.io/"
+baseURL = "https://joor0x.github.io/"
 languageCode = "en-us"
-title = "Josep Oriol Carné - Developer & Algorithmic Trader"
+title = "Joor0x - Developer & Algorithmic Trader"
 theme = "PaperMod"
 # Turn on if you want to show drafts
 # buildDrafts = true  
 
 [params]
   # Name of your site/brand
-  author = "Josep Oriol Carné"
+  author = "Joor0x"
   description = "A blog on Evolution, Algorithmic Trading and Cybersecurity."
   showReadingTime = true
 
 [[params.socialIcons]]
   name = "github"
-  url = "https://github.com/joseporiolcarne"
+  url = "https://github.com/joor0x"
   title = "GitHub"
   # Suggest a color palette with cool/futuristic tones or neutral tech shades
   # Use PaperMod's color customization features
