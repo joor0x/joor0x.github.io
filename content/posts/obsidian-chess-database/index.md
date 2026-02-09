@@ -1,6 +1,6 @@
 +++
 title = "Using Obsidian as a Chess Game Database"
-author = "Josep Oriol Carné"
+author = "joor0x"
 date = 2026-01-09
 description = "How to build a personal chess review system in Obsidian using Web Clipper to track games, openings, and blunders."
 tags = ["chess", "obsidian", "productivity", "lichess", "improvement"]
@@ -166,8 +166,9 @@ The note includes:
 
 Once you have a collection of games:
 
-- **Search** across all annotations for patterns
 - **Graph view** shows connections between openings and games
 - **Dataview queries** can list all games where you played Black, or all blunders tagged `#tactics`
 - **Backlinks** reveal which openings lead to consistent problems
+- **Reorganize** you can spend hours changing the tags and improving the notes instead of playing chess, but that’s part of the fun!
+
 
