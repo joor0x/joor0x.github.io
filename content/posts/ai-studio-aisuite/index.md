@@ -1,17 +1,17 @@
 +++
-title = 'AI Studio with aisuite: One Client, Any Model'
+title = 'Aisuite: One Client, Any Model'
 date = 2026-02-09T10:00:00+01:00
 draft = false
 description = "aisuite is the simplest way I’ve found to switch LLM providers without rewriting my code."
 tags = ["ai", "llm", "tools", "python"]
 +++
 
-When I’m in **AI Studio** mode (rapid prototyping, lots of experiments), I want to spend my time on prompts, evals, and product logic — not on re-learning yet another SDK.
+When I’m in **AI Studio** mode (rapid prototyping, lots of experiments), I want to spend my time on prompts, evals and breaking the code — not on re-learning yet another SDK.
 
 That’s why I use [aisuite](https://github.com/andrewyng/aisuite) for most of my AI projects:
 
 - One client API across providers
-- Switching models is usually just changing a string like `openai:gpt-4o` → `minimax:MiniMax-Text-01`
+- Switching models is usually just changing a string like `openai:gpt-5-mini` → `minimax:MiniMax-M2.1-lightning` or even local `ollama`
 - It stays close to the OpenAI-style shape, so it’s easy to adopt
 
 Lately I use quite a bit **Minimax** for coding tasks because it hits a great ratio of **price vs quality**.
@@ -25,7 +25,7 @@ import aisuite as ai
 client = ai.Client()
 
 response = client.chat.completions.create(
-    model="minimax:MiniMax-Text-01",
+    model="minimax:MiniMax-M2.1-lightning",
     messages=[{"role": "user", "content": "Review this diff and suggest improvements."}],
     temperature=0.2,
 )
