@@ -2,7 +2,6 @@
 title: "Disposable Kali in Docker: Recover a Forgotten ZIP Password"
 author: "joor0x"
 date: 2026-05-10
-draft: true
 description: "Spin up a throwaway Kali Linux container with Docker, then use John the Ripper to recover the password of an encrypted ZIP file — no VMs, no mess."
 tags: ["cybersecurity", "docker", "kali-linux", "john-the-ripper", "password-cracking", "pentesting", "containers"]
 showToc: true
