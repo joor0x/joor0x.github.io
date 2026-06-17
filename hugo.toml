@@ -8,18 +8,37 @@ theme = "PaperMod"
 [params]
   # Name of your site/brand
   author = "Joor0x"
-  description = "A blog on Evolution, Algorithmic Trading and Cybersecurity."
-  showReadingTime = true
+  description = "Notes on algorithmic trading, privacy, Linux and productivity."
+  keywords = ["trading", "privacy", "linux", "productivity", "cybersecurity", "self-hosting"]
+
+  # Default to the dark, terminal-inspired theme
+  defaultTheme = "dark"
+  disableThemeToggle = false
+
+  # Reading experience
+  ShowReadingTime = true
+  ShowWordCount = false
+  ShowCodeCopyButtons = true
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowShareButtons = false
+  ShowToc = true
+  TocOpen = false
+
+  # Homepage hero
+  [params.homeInfoParams]
+    Title = "Build systems that learn. Keep them private."
+    Content = """
+Notes from a developer & algorithmic trader on **trading**, **privacy**, **Linux** and **productivity** — autonomous systems, self-hosting, and tools worth keeping.
+"""
+
+  [params.label]
+    text = "joor0x"
 
 [[params.socialIcons]]
   name = "github"
   url = "https://github.com/joor0x"
   title = "GitHub"
-  # Suggest a color palette with cool/futuristic tones or neutral tech shades
-  # Use PaperMod's color customization features
-  themeColor = "auto"   # "light", "dark", or "auto"
-  # Example: set accent color if the theme allows
-  accentColor = "#5c6bc0"  # Blue-purple shade
 
 [menu]
 

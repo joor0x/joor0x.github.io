@@ -1,0 +1,346 @@
+/* =============================================================
+   Joor0x — Minimalist developer restyle
+   Built on PaperMod. System fonts only (no external tracking),
+   terminal-inspired chrome, teal accent, soft card UI.
+   Topics: trading · privacy · linux · productivity
+   ============================================================= */
+
+/* ---------- Design tokens ---------- */
+:root {
+    --gap: 24px;
+    --content-gap: 22px;
+    --nav-width: 1100px;
+    --main-width: 740px;
+    --radius: 12px;
+
+    /* Font stacks — system, privacy-friendly, zero network cost */
+    --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+        Helvetica, Arial, sans-serif;
+    --font-mono: ui-monospace, "JetBrains Mono", "SFMono-Regular", "SF Mono",
+        Menlo, Consolas, "Liberation Mono", monospace;
+
+    /* Light palette */
+    --theme: #fbfbf9;
+    --entry: #ffffff;
+    --primary: #15171c;
+    --secondary: #5b626d;
+    --tertiary: #d7dae0;
+    --content: #2a2d34;
+    --border: #e7e8ea;
+    --code-bg: #f2f3f1;
+    --code-block-bg: #14161b;
+
+    /* Accent — terminal teal */
+    --accent: #0d9488;
+    --accent-soft: rgba(13, 148, 136, 0.12);
+}
+
+.dark {
+    --theme: #0d0e12;
+    --entry: #15171d;
+    --primary: #e7e8ea;
+    --secondary: #8b909b;
+    --tertiary: #2a2e38;
+    --content: #c4c7cd;
+    --border: #21242c;
+    --code-bg: #1b1e25;
+    --code-block-bg: #15171d;
+
+    --accent: #2dd4bf;
+    --accent-soft: rgba(45, 212, 191, 0.13);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    background: var(--theme);
+    background-image: radial-gradient(
+        var(--accent-soft) 0.5px,
+        transparent 0.5px
+    );
+    background-size: 0; /* disabled by default; subtle grid below for dark */
+}
+
+/* Subtle dotted backdrop, dark mode only — adds depth without clutter */
+.dark body {
+    background-image: radial-gradient(
+        rgba(255, 255, 255, 0.022) 1px,
+        transparent 1px
+    );
+    background-size: 22px 22px;
+}
+
+/* ---------- Header / nav ---------- */
+.nav {
+    max-width: calc(var(--nav-width) + var(--gap) * 2);
+}
+
+header.header {
+    border-bottom: 1px solid var(--border);
+    background: color-mix(in srgb, var(--theme) 88%, transparent);
+    backdrop-filter: saturate(140%) blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 40;
+}
+
+.logo a {
+    font-family: var(--font-mono);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--primary);
+}
+
+/* terminal prompt before the brand */
+.logo a::before {
+    content: "~$";
+    color: var(--accent);
+    margin-right: 0.45rem;
+    font-weight: 600;
+}
+
+.menu a,
+.logo-switches a {
+    font-family: var(--font-mono);
+    font-size: 0.86rem;
+    color: var(--secondary);
+    border-radius: 8px;
+    transition: color 0.18s ease, background 0.18s ease;
+}
+
+.menu a:hover {
+    color: var(--primary);
+    background: var(--accent-soft);
+}
+
+.menu a.active {
+    color: var(--accent);
+}
+
+#theme-toggle,
+.lang-switch a {
+    color: var(--secondary);
+}
+
+/* ---------- Home hero (first entry) ---------- */
+.first-entry {
+    min-height: 280px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 18px;
+}
+
+.first-entry .entry-header h1 {
+    font-size: 2.6rem;
+    line-height: 1.12;
+    letter-spacing: -0.03em;
+}
+
+.home-info .entry-content {
+    font-size: 1.05rem;
+    color: var(--secondary);
+}
+
+/* ---------- Post list cards ---------- */
+.post-entry {
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--entry);
+    padding: 22px 24px;
+    transition: transform 0.18s ease, border-color 0.18s ease,
+        box-shadow 0.18s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.post-entry::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: var(--accent);
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.2s ease;
+}
+
+.post-entry:hover {
+    transform: translateY(-3px);
+    border-color: color-mix(in srgb, var(--accent) 45%, var(--border));
+    box-shadow: 0 8px 26px -12px rgba(0, 0, 0, 0.45);
+}
+
+.post-entry:hover::before {
+    transform: scaleY(1);
+}
+
+.entry-header h2 {
+    font-size: 1.4rem;
+    letter-spacing: -0.02em;
+    line-height: 1.25;
+}
+
+.entry-hint {
+    color: var(--secondary);
+}
+
+/* ---------- Meta (dates, reading time) in mono ---------- */
+.post-meta,
+.entry-footer,
+.archive-meta,
+.breadcrumbs {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    letter-spacing: 0.01em;
+    color: var(--secondary);
+}
+
+/* ---------- Tag pills ---------- */
+.post-tags li a,
+.terms-tags a {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--secondary);
+    border-radius: 999px;
+    padding: 4px 12px;
+    transition: all 0.16s ease;
+}
+
+.post-tags li a::before {
+    content: "#";
+    color: var(--accent);
+    margin-right: 1px;
+    opacity: 0.8;
+}
+
+.post-tags li a:hover,
+.terms-tags a:hover {
+    color: var(--theme);
+    background: var(--accent);
+    border-color: var(--accent);
+    transform: translateY(-1px);
+}
+
+.post-tags li a:hover::before {
+    color: var(--theme);
+}
+
+/* ---------- Single post ---------- */
+.post-single .post-title {
+    font-size: 2.3rem;
+    line-height: 1.15;
+    letter-spacing: -0.03em;
+}
+
+.post-content {
+    font-size: 1.04rem;
+    line-height: 1.78;
+}
+
+.post-content h2,
+.post-content h3,
+.post-content h4 {
+    letter-spacing: -0.02em;
+    margin-top: 2.2rem;
+}
+
+/* accent bar on section headings */
+.post-content h2 {
+    padding-left: 0.7rem;
+    border-left: 3px solid var(--accent);
+}
+
+.post-content a {
+    color: var(--accent);
+    text-underline-offset: 3px;
+    text-decoration-color: color-mix(in srgb, var(--accent) 45%, transparent);
+}
+
+.post-content a:hover {
+    text-decoration-color: var(--accent);
+}
+
+.post-content blockquote {
+    border-left: 3px solid var(--accent);
+    background: var(--accent-soft);
+    border-radius: 0 8px 8px 0;
+    padding: 2px 18px;
+    color: var(--content);
+}
+
+.post-content img {
+    border-radius: 10px;
+    border: 1px solid var(--border);
+}
+
+/* inline + block code */
+.post-content code {
+    font-family: var(--font-mono);
+    background: var(--code-bg);
+    border-radius: 6px;
+    font-size: 0.86em;
+}
+
+.post-content pre {
+    border-radius: 10px;
+    border: 1px solid var(--border);
+}
+
+.post-content pre code {
+    background: transparent;
+}
+
+/* ---------- Buttons / pagination ---------- */
+.page-link,
+.paginav a,
+.post-tags a {
+    font-family: var(--font-mono);
+}
+
+.paginav a:hover {
+    border-color: var(--accent);
+}
+
+#top-link {
+    background: var(--accent);
+    color: var(--theme);
+}
+
+/* ---------- Footer ---------- */
+.footer {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    color: var(--secondary);
+    border-top: 1px solid var(--border);
+    margin-top: 2rem;
+}
+
+.footer a {
+    color: var(--accent);
+}
+
+/* selection */
+::selection {
+    background: var(--accent);
+    color: var(--theme);
+}
+
+/* ---------- Responsive tweaks ---------- */
+@media (max-width: 680px) {
+    .first-entry .entry-header h1 {
+        font-size: 2rem;
+    }
+    .post-single .post-title {
+        font-size: 1.8rem;
+    }
+    .post-entry {
+        padding: 18px 18px;
+    }
+}

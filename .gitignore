@@ -11,7 +11,11 @@ resources/
 /categories/
 /page/
 /about/
-/assets/
+/assets/*
+# ...but keep Hugo source assets (custom CSS pipeline) tracked
+!/assets/css/
+/assets/css/*
+!/assets/css/extended/
 
 # OS files
 .DS_Store
