@@ -45,3 +45,6 @@ __pycache__/
 AGENTS.md
 .obsidian/
 .obsidian/
+
+# Generated syndication copies (DEV.to / Hashnode)
+syndication/
