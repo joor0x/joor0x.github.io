@@ -1,4 +1,4 @@
-+++
+ +++
 title = 'A Power Outage Took Down My Homelab and I Never Noticed'
 date = 2026-10-11
 description = 'A power cut on vacation left two homelab servers offline without me knowing. Here is how I set up free monitoring with Healthchecks.io in 30 minutes.'
@@ -57,11 +57,3 @@ The same trick works for anything that runs on a schedule. Append the ping to yo
 ```
 
 A silent backup failure is just as dangerous as a dead server, and usually discovered at a much worse moment.
-
-## Lessons Learned
-
-- **Things will fail when you're not around.** Power cuts don't wait for you to be home.
-- **Silent failures are the real problem.** Downtime is annoying; not knowing about it is worse.
-- **Monitoring doesn't need to be complex.** A cron job and a free service cover 90% of what a homelab needs.
-
-The next thing on my list is checking why those two servers didn't come back on their own (BIOS "restore on AC power loss" is the usual suspect). But at least now, if it happens again, I'll know within minutes instead of days.
