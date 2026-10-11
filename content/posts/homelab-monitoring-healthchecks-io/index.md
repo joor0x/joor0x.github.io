@@ -1,4 +1,4 @@
- +++
++++
 title = 'A Power Outage Took Down My Homelab and I Never Noticed'
 date = 2026-10-11
 description = 'A power cut on vacation left two homelab servers offline without me knowing. Here is how I set up free monitoring with Healthchecks.io in 30 minutes.'
